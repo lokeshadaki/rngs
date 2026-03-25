@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "674234163098",
+    "project_id": "rngs-a533d",
+    "storage_bucket": "rngs-a533d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674234163098:android:e92cc95630e3306d046423",
+        "android_client_info": {
+          "package_name": "com.example.rngs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfWIkuSAUBXxmUO4xjXFTcRjsozf3sqgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

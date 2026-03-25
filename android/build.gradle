@@ -1,0 +1,38 @@
+buildscript {
+    ext {
+        kotlin_version = '1.9.22'
+        // You can define other common versions here if needed, e.g. navigation_version, hilt_version, etc.
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.3.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")
+}
+
+// Optional: You can also add this to speed up builds if you are using Jetifier (for legacy AndroidX migration)
+// gradle.properties should have android.enableJetifier=true
+// tasks.withType(JavaCompile) {
+//     options.incremental = true
+// }
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
